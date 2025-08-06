@@ -1,0 +1,19 @@
+# TouchDesigner specific ignores
+*.toe.lock              # Lock files for TouchDesigner
+*.tox.lock              # Lock files for TouchDesigner
+*.bak                   # Backup files from TouchDesigner
+*.temp                  # Temporary files
+
+
+# Ignore the TouchDesigner cache and generated temp files
+/project1/.settings      # Settings folders
+/project1/.log           # Log files
+/project1/.touch          # TouchDesigner-created files
+
+
+.idea/
+
+# System Files
+.DS_Store
+Thumbs.db
+*.ini
