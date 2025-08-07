@@ -2,6 +2,9 @@
 
 A real-time visual system built in TouchDesigner that transforms live audio and video input into a looping, animated road of reactive blocks. Designed with modularity and clarity in mind, this project focuses on clean data handling, procedural instancing, and a scalable approach to music-driven visuals.
 
+![Rendering Preview](screenshots/renderingPreview.png)
+*Preview of the audio-reactive visual output*
+
 ---
 
 ## Overview
@@ -46,6 +49,9 @@ The system emphasizes:
 6. State is managed via raw input, eval, and logic output tables using DATs and Python scripts.
 7. Custom GLSL shaders handle visual effects and animation.
 
+![Base Level Structure](screenshots/base_level.png)
+*The base network structure in TouchDesigner showing the operator connections*
+
 ---
 
 ## Technical Components
@@ -62,8 +68,14 @@ The PS5 controller integration allows for real-time manipulation of parameters:
 - R2 Value: Control animation speed, audio speed, and scenery movement speed
 - Right Joystick: Camera control (yaw and pitch)
 
+![PS5 Controller Inputs](screenshots/PS5_controller_inputs.png)
+*PS5 controller input configuration and mapping to visual parameters*
+
 ### Logic System
 A table-driven logic system maintains state and handles parameter updates, keeping the codebase clean and modular.
+
+![PS5 Debug Interface](screenshots/PS5_debug.png)
+*Debug interface showing the logic system and controller state monitoring*
 
 ---
 
