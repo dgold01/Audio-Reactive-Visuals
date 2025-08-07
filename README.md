@@ -42,12 +42,11 @@ The system emphasizes:
 ## How It Works
 
 1. A Grid SOP defines initial block positions.
-2. Positions are converted to CHOPs and modulated using amplitude data.
-3. The CHOP data is converted back into SOP to apply vertical displacement.
-4. Blocks are instanced procedurally in 3D space.
-5. Live video is processed with TOPs and optionally composited with the 3D output.
-6. State is managed via raw input, eval, and logic output tables using DATs and Python scripts.
-7. Custom GLSL shaders handle visual effects and animation.
+2. Block displacement is handled entirely in a GLSL MAT, driven by audio amplitude data.
+3. Audio analysis is passed to the shader as either a TOP texture (frequency bands) or a single amplitude value.
+4. Video input is processed with TOPs and rendered onto animated spheres using a separate GLSL MAT.
+5. All motion and effects are computed on the GPU.
+6. State logic is managed via raw input, eval, and logic tables (DATs), coordinated through Python scripts.
 
 ![Base Level Structure](screenshots/base_level.png)
 *The base network structure in TouchDesigner showing the operator connections*
